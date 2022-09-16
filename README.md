@@ -7,7 +7,7 @@ Package license: MPL-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dataconf-feedstock/blob/main/LICENSE.txt)
 
-Summary: Simple dataclasses configuration management for Python with hocon/json/yaml/properties/env-vars/dict support.
+Summary: Simple dataclasses configuration management for Python with hocon/json/yaml/properties/env-vars/dict support
 
 Current build status
 ====================
@@ -143,5 +143,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@dwsmith1983](https://github.com/dwsmith1983/)
 * [@thewchan](https://github.com/thewchan/)
+* [@zifeo](https://github.com/zifeo/)
 
