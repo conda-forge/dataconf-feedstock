@@ -1,11 +1,11 @@
-About dataconf
-==============
+About dataconf-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dataconf-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/zifeo/dataconf
 
 Package license: MPL-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dataconf-feedstock/blob/main/LICENSE.txt)
 
 Summary: Simple dataclasses configuration management for Python with hocon/json/yaml/properties/env-vars/dict support
 
