@@ -21,13 +21,13 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.8
+    - python >=3.8,<4.0
   run:
-    - pyhocon >=0.3.59,<0.4.0
+    - pyhocon >=0.3.59
     - pyparsing ~=2.0
-    - python >=3.8
+    - python >=3.8,<4.0
     - python-dateutil >=2.8.2,<3.0.0
-    - pyyaml >=6.0
+    - pyyaml >=6.0.1,<6.1.0
 
 test:
   imports:
