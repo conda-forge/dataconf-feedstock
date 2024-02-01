@@ -1,5 +1,5 @@
 {% set name = "dataconf" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dataconf-{{ version }}.tar.gz
-  sha256: 5328acf862a42e559aa89b19450abd949ae38c0dbd6e0726bd7cedc98dad1f4e
+  sha256: d9cf3f47712a01571d77999067a428bd417341a7f3a11aba4eacd0cc000a53a8
 
 build:
   number: 0
