@@ -1,5 +1,5 @@
 {% set name = "dataconf" %}
-{% set version = "2.5.0" %}
+{% set version = "3.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dataconf-{{ version }}.tar.gz
-  sha256: d9cf3f47712a01571d77999067a428bd417341a7f3a11aba4eacd0cc000a53a8
+  sha256: 041325ed42f36637786a9712688359410184c62738945f7a7555cf360e6f0103
 
 build:
   number: 0
@@ -20,13 +20,15 @@ build:
 requirements:
   host:
     - pip
-    - poetry
+    - poetry-core >=1.1.0
     - python >=3.8,<4.0
   run:
-    - pyhocon ==0.3.59
     - python >=3.8,<4.0
+    - pyhocon >=0.3.60,<0.4.0
+    - isodate >=0.6.1,<0.7.0
     - python-dateutil >=2.8.2,<3.0.0
-    - pyyaml >=6.0.1,<6.1.0
+    - pyyaml >=6.0.1,<7.0.0
+    - pyparsing >=3.1.2,<4.0.0
 
 test:
   imports:
