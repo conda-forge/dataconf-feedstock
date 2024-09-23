@@ -34,7 +34,8 @@ test:
   imports:
     - dataconf
   commands:
-    - pip check
+    # Disabling pip check because upstream pinned to python-dateutil 2.9.0.post0, can restore when we move off of that
+    # - pip check
     - dataconf --help
   requires:
     - pip
