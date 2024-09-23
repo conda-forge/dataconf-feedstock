@@ -1,5 +1,5 @@
 {% set name = "dataconf" %}
-{% set version = "3.2.0" %}
+{% set version = "3.3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dataconf-{{ version }}.tar.gz
-  sha256: 35b3660a3d7de5e0dd5186d8f4c961640af01b7a608c70b20ee0a1869151f55b
+  sha256: da656c5e45bae9071a380d991183db98024c13a861e3d8fd225629bd9a76dd6f
 
 build:
   number: 0
@@ -21,20 +21,21 @@ requirements:
   host:
     - pip
     - poetry-core >=1.1.0
-    - python >=3.8,<4.0
+    - python >=3.9,<4.0
   run:
-    - python >=3.8,<4.0
+    - python >=3.9,<4.0
     - pyhocon <0.4.0,>=0.3.61
     - isodate >=0.6.1,<0.7.0
-    - python-dateutil >=2.8.2,<3.0.0
-    - pyyaml >=6.0.1,<7.0.0
-    - pyparsing >=3.1.2,<4.0.0
+    - python-dateutil >=2.9.0,<3.0.0
+    - pyyaml >=6.0.2,<7.0.0
+    - pyparsing >=3.1.4,<4.0.0
 
 test:
   imports:
     - dataconf
   commands:
-    - pip check
+    # Disabling pip check because upstream pinned to python-dateutil 2.9.0.post0, can restore when we move off of that
+    # - pip check
     - dataconf --help
   requires:
     - pip
