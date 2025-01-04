@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dataconf-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dataconf-{{ version }}.tar.gz
   sha256: da656c5e45bae9071a380d991183db98024c13a861e3d8fd225629bd9a76dd6f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - dataconf = dataconf.cli:run
@@ -21,9 +21,9 @@ requirements:
   host:
     - pip
     - poetry-core >=1.1.0
-    - python >=3.9,<4.0
+    - python {{ python_min }}
   run:
-    - python >=3.9,<4.0
+    - python >={{ python_min }},<4.0
     - pyhocon <0.4.0,>=0.3.61
     - isodate >=0.6.1,<0.7.0
     - python-dateutil >=2.9.0,<3.0.0
@@ -39,6 +39,7 @@ test:
     - dataconf --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/zifeo/dataconf
