@@ -1,5 +1,6 @@
 {% set name = "dataconf" %}
 {% set version = "3.6.0" %}
+{% set python_min = "3.10" %}
 
 
 package:
@@ -24,18 +25,17 @@ requirements:
     - python {{ python_min }}
   run:
     - python >={{ python_min }},<4.0
-    - pyhocon <0.4.0,>=0.3.61
-    - isodate >=0.6.1,<0.7.0
-    - python-dateutil >=2.9.0,<3.0.0
+    - python-dateutil >=2.9.0.post0,<3.0.0
     - pyyaml >=6.0.2,<7.0.0
-    - pyparsing >=3.1.4,<4.0.0
+    - isodate >=0.7.2,<0.8.0
+    - pyhocon <0.4.0,>=0.3.61
+    - pyparsing >=3.2.3,<4.0.0
 
 test:
   imports:
     - dataconf
   commands:
-    # Disabling pip check because upstream pinned to python-dateutil 2.9.0.post0, can restore when we move off of that
-    # - pip check
+    - pip check
     - dataconf --help
   requires:
     - pip
